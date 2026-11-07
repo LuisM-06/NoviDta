@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>22 meses amándote ♡</title>
+<style>
+:root{
+  --ink:#fff7fb;
+  --muted:#f3d8ea;
+  --rose:#f7a0c0;
+  --rose-deep:#f08ab1;
+  --gold:#f2d39e;
+  --line:rgba(255,255,255,.15);
+  --bg1:#0f0a28;
+  --bg2:#241040;
+  --bg3:#150f2b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 50% 6%, rgba(124,92,170,.45), transparent 32%),
+    linear-gradient(180deg,var(--bg2),var(--bg1) 45%, var(--bg3));
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.8;
+  background-image:
+   radial-gradient(3px 3px at 8% 8%, rgba(255,255,255,.9) 80%, transparent 100%),
+   radial-gradient(3px 3px at 84% 10%, rgba(255,255,255,.85) 80%, transparent 100%),
+   radial-gradient(3px 3px at 95% 18%, rgba(255,255,255,.8) 80%, transparent 100%),
+   radial-gradient(3px 3px at 12% 42%, rgba(255,255,255,.85) 80%, transparent 100%),
+   radial-gradient(3px 3px at 88% 44%, rgba(255,255,255,.8) 80%, transparent 100%),
+   radial-gradient(3px 3px at 22% 74%, rgba(255,255,255,.9) 80%, transparent 100%),
+   radial-gradient(3px 3px at 60% 70%, rgba(255,255,255,.75) 80%, transparent 100%),
+   radial-gradient(3px 3px at 80% 92%, rgba(255,255,255,.85) 80%, transparent 100%),
+   radial-gradient(3px 3px at 18% 92%, rgba(255,255,255,.8) 80%, transparent 100%),
+   radial-gradient(3px 3px at 50% 87%, rgba(255,255,255,.65) 80%, transparent 100%);
+}
+main{max-width:1400px;margin:0 auto;padding:26px 18px 70px;position:relative;z-index:1}
+section{padding:70px 18px;text-align:center}
+.hero{padding-top:40px;padding-bottom:44px}
+.moon{font-size:82px;line-height:1;color:#fff;opacity:.95;text-shadow:0 0 24px rgba(255,255,255,.35)}
+.eyebrow{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  font-size:18px;
+  margin:20px 0 28px;
+}
+.hero h1{
+  margin:0;
+  font-size:clamp(80px,11vw,160px);
+  font-weight:300;
+  line-height:.95;
+}
+.hero h1 em{
+  display:block;
+  font-style:italic;
+  color:var(--rose);
+  font-weight:300;
+}
+.hero p{
+  max-width:1180px;
+  margin:34px auto 0;
+  font-size:clamp(24px,3vw,42px);
+  line-height:1.6;
+  color:#f7edf3;
+}
+.date{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:clamp(20px,2vw,28px);
+  margin-top:62px;
+}
+.divider{
+  width:120px;
+  height:2px;
+  margin:55px auto 0;
+  background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity:.85;
+}
+
+.panel{
+  border:1px solid var(--line);
+  border-radius:34px;
+  background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+  backdrop-filter:blur(3px);
+}
+.panel .eyebrow{margin-top:0}
+.panel h2{
+  margin:0;
+  font-size:clamp(54px,7vw,98px);
+  line-height:1.08;
+  font-weight:300;
+}
+.panel .sub{
+  margin:28px 0 0;
+  font-size:clamp(28px,3vw,52px);
+  color:var(--rose);
+  line-height:1.3;
+}
+
+#heartSection{padding-top:42px}
+.heart-wrap{margin-top:44px}
+.heart-label{font-size:clamp(34px,3.2vw,54px);color:var(--rose);margin:28px 0 26px}
+.big-heart{
+  width:270px;height:270px;border-radius:50%;
+  border:3px solid rgba(252,179,210,.9);
+  background:radial-gradient(circle, rgba(255,149,194,.22) 0%, rgba(255,149,194,.10) 38%, rgba(255,149,194,.02) 70%);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:132px;color:#ff99bf;
+  cursor:pointer;
+  box-shadow:0 0 40px rgba(255,134,188,.25), inset 0 0 40px rgba(255,134,188,.06);
+  text-shadow:0 0 36px rgba(255,152,196,.55);
+  transition:transform .2s ease, box-shadow .2s ease;
+  animation:beat 2.15s infinite;
+}
+.big-heart:hover{transform:scale(1.03)}
+.big-heart.active{animation:beat .85s infinite}
+@keyframes beat{
+  0%,100%{transform:scale(1)}
+  20%{transform:scale(1.08)}
+  35%{transform:scale(1.01)}
+  52%{transform:scale(1.13)}
+  70%{transform:scale(1)}
+}
+.reveal{
+  min-height:128px;
+  max-width:1200px;
+  margin:34px auto 0;
+  font-size:clamp(24px,2.8vw,44px);
+  line-height:1.55;
+  color:#ffe7f1;
+}
+.word{display:inline-block;margin-right:.25em;opacity:0;transform:translateY(10px);filter:blur(3px);animation:wordIn .42s forwards}
+@keyframes wordIn{to{opacity:1;transform:translateY(0);filter:blur(0)}}
+.float-heart{position:fixed;pointer-events:none;z-index:20;font-size:26px;animation:floatUp 2.5s ease-out forwards}
+@keyframes floatUp{to{transform:translate(var(--dx), -210px) rotate(20deg);opacity:0}}
+
+.letter-section{margin-top:26px}
+.letter-section h2{font-size:clamp(54px,6.4vw,88px)}
+.letter-section .sub{max-width:1320px;margin-left:auto;margin-right:auto;color:#f3dbe8}
+.button{
+  display:inline-block;
+  margin-top:42px;
+  border:none;
+  border-radius:999px;
+  padding:28px 66px;
+  min-width:420px;
+  background:linear-gradient(135deg,#f7b0cb,#ef8eb0);
+  color:#24142b;
+  font-size:clamp(28px,2.6vw,38px);
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 12px 36px rgba(255,144,190,.23);
+}
+.letter-content{
+  display:none;
+  max-width:1100px;
+  margin:34px auto 0;
+  text-align:left;
+  color:#fff1f7;
+  font-size:clamp(22px,2vw,32px);
+  line-height:1.8;
+}
+.letter-content.show{display:block;animation:fadeIn .45s ease}
+.letter-content p{margin:0 0 18px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+.final h2{font-size:clamp(58px,7vw,102px)}
+.final .sub{font-size:clamp(36px,4vw,72px)}
+.secret{
+  display:none;
+  max-width:1000px;
+  margin:34px auto 0;
+  color:#ffe4ef;
+  font-size:clamp(30px,3vw,46px);
+  line-height:1.6;
+}
+.secret.show{display:block;animation:fadeIn .45s ease}
+.footer{
+  margin-top:28px;
+  color:#f4dbe7;
+  font-size:clamp(24px,2vw,32px);
+}
+
+
+/* Galería de nuestros momentos */
+.photos-section{padding-top:50px;padding-bottom:80px}
+.photos-section h2{font-weight:300;font-size:clamp(48px,6.7vw,92px);margin:38px 0 24px}
+.photos-section .photo-sub{font-size:clamp(22px,3.1vw,46px);color:#f5cee4;margin:0 auto 50px;line-height:1.45}
+.photos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;align-items:center}
+.photo-frame{aspect-ratio:3/4;min-width:0;display:flex;align-items:center;justify-content:center;position:relative;border:2px dashed #e0abc9;border-radius:40px;background:linear-gradient(145deg,rgba(255,177,207,.08),rgba(70,85,135,.12));overflow:hidden}
+.photo-frame:nth-child(2){transform:translateY(-22px)}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:none}
+.photo-frame.has-photo img{display:block}
+.photo-frame.has-photo .photo-placeholder{display:none}
+.photo-placeholder{font-size:clamp(20px,2.3vw,32px);color:#ffe0ef;line-height:1.8}
+.photo-placeholder span{display:block}
+.photos-note{font-size:15px;color:#e6c7d9;margin:34px auto 0;line-height:1.5}
+@media(max-width:650px){.photos-grid{gap:9px}.photo-frame{border-radius:16px;border-width:1px}.photo-frame:nth-child(2){transform:translateY(-9px)}.photo-placeholder{font-size:14px}.photos-section{padding-bottom:40px}.photos-section .photo-sub{margin-bottom:32px}.photos-note{font-size:12px}}
+
+@media (max-width:900px){
+  main{padding:10px 10px 44px}
+  section{padding:42px 8px}
+  .eyebrow{letter-spacing:.22em;font-size:13px}
+  .hero p{font-size:22px}
+  .date{font-size:18px}
+  .panel{border-radius:24px}
+  .button{min-width:unset;width:100%;padding:22px 26px;font-size:26px}
+  .big-heart{width:200px;height:200px;font-size:96px}
+  .reveal{min-height:90px}
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="moon">☾</div>
+    <div class="eyebrow">Para mi Dulcita</div>
+    <h1>22 meses <em>amándote</em></h1>
+    <p>Este detallito lo hago con mucho amor, ya que eres mi todo, mi mundo entero y me encanta demostrarte cuánto te amo de muchísimas formas.</p>
+    <div class="date">7 de noviembre de 2026 · tú y yo ♡</div>
+    <div class="divider"></div>
+  </section>
+
+  <section id="heartSection">
+    <div class="eyebrow">Mi corazoncito late por ti ♡</div>
+    <h2>Mi corazón se acelera<br>cuando estoy a tu lado ♡</h2>
+    <div class="heart-label">Toca el corazoncito ♡</div>
+    <div class="heart-wrap">
+      <button class="big-heart" id="heartBtn" aria-label="Toca el corazoncito">♥</button>
+    </div>
+    <div class="reveal" id="revealMessage" aria-live="polite"></div>
+  </section>
+
+
+  <section class="photos-section" id="fotos">
+    <div class="eyebrow">Nuestros momentos</div>
+    <h2>Cuando estamos juntitos</h2>
+    <p class="photo-sub">Fotitos que adoro al lado de el amor de mi vida. ♡</p>
+    <div class="photos-grid">
+      <div class="photo-frame"><img src="foto1.jpg" alt="Nuestra foto 1" onload="this.parentElement.classList.add('has-photo')"><div class="photo-placeholder"><span>♡</span>Foto 1</div></div>
+      <div class="photo-frame"><img src="foto2.jpg" alt="Nuestra foto 2" onload="this.parentElement.classList.add('has-photo')"><div class="photo-placeholder"><span>♡</span>Foto 2</div></div>
+      <div class="photo-frame"><img src="foto3.jpg" alt="Nuestra foto 3" onload="this.parentElement.classList.add('has-photo')"><div class="photo-placeholder"><span>♡</span>Foto 3</div></div>
+    </div>
+  </section>
+
+  <section class="panel letter-section">
+    <div class="eyebrow">Una cartita para mi amorcito</div>
+    <h2>Un mensajito para mi Dulcita hermosa.</h2>
+    <div class="sub">Las palabras nunca serán suficientes para poder expresar todo lo que siento por ti. Te amo con cada latido de mi corazón.</div>
+    <button class="button" id="letterBtn">Abre la cartita 💌</button>
+    <div class="letter-content" id="letterContent">
+      <p>Mi princesa bella, mi niña divina, mi Dulcita preciosa, te amo, TE AMO, como no tienes idea, desde que te conocí te convertiste en mi persona favorita, mi otra mitad, mi alma gemela, eres una novia increíble, me encantas de pies a cabeza, llenas de felicidad mi vida, quisiera detener el tiempo cuando estoy a tu lado, y así estar por siempre juntitos.</p>
+      <p>Mi vida, vives en mi mente siempreeee y eso me fascina porque me das motivación para avanzar día con día y convertirme en el hombre que mereces, te amo mi monita, y así será por siempre hasta que mi corazón deje de latir.</p>
+      <p style="text-align:right;color:var(--gold)">Con todo mi amor,<br>Tu pollito</p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="eyebrow">Una cosita más</div>
+    <h2>En esta y en todas las vidas posibles...</h2>
+    <div class="sub">Siempre daré la misma respuesta.</div>
+    <button class="button" id="finalBtn">Toca aquí amorcito ♡</button>
+    <div class="secret" id="secret">Te volvería a elegir a ti,<br>una y mil veces más. ❤️</div>
+    <div class="footer">Hecho para mi princesita linda · 07.01.2025 ♡</div>
+  </section>
+</main>
+
+<script>
+const revealText = 'Me enamoro cada día más de ti. Me siento tan afortunado de haber conocido a la mujer más increíble del mundo.';
+const heartBtn = document.getElementById('heartBtn');
+const revealMessage = document.getElementById('revealMessage');
+let timer;
+
+heartBtn.addEventListener('click', () => {
+  clearInterval(timer);
+  revealMessage.innerHTML = '';
+  heartBtn.classList.add('active');
+  const words = revealText.split(' ');
+  let i = 0;
+
+  timer = setInterval(() => {
+    if (i < words.length) {
+      const span = document.createElement('span');
+      span.className = 'word';
+      span.textContent = words[i] + ' ';
+      revealMessage.appendChild(span);
+      i++;
+    } else {
+      clearInterval(timer);
+      burstFromHeart();
+    }
+  }, 270);
+});
+
+function burstFromHeart(){
+  const r = heartBtn.getBoundingClientRect();
+  for(let i=0;i<18;i++){
+    const el = document.createElement('span');
+    el.className = 'float-heart';
+    el.textContent = ['♡','♥','💗','✨'][i%4];
+    el.style.left = (r.left + r.width/2 + (Math.random()*120 - 60)) + 'px';
+    el.style.top = (r.top + r.height/2) + 'px';
+    el.style.setProperty('--dx', (Math.random()*220 - 110) + 'px');
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 2600);
+  }
+}
+
+const letterBtn = document.getElementById('letterBtn');
+const letterContent = document.getElementById('letterContent');
+letterBtn.addEventListener('click', ()=>{
+  const open = letterContent.classList.toggle('show');
+  letterBtn.textContent = open ? 'Cerrar la cartita ♡' : 'Abre la cartita 💌';
+});
+
+const finalBtn = document.getElementById('finalBtn');
+const secret = document.getElementById('secret');
+finalBtn.addEventListener('click', ()=>{
+  secret.classList.add('show');
+  for(let i=0;i<28;i++){
+    const el = document.createElement('span');
+    el.className = 'float-heart';
+    el.textContent = ['♡','♥','💗','✨'][i%4];
+    el.style.left = (Math.random()*100) + 'vw';
+    el.style.top = (65 + Math.random()*20) + 'vh';
+    el.style.setProperty('--dx', (Math.random()*160 - 80) + 'px');
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 2600);
+  }
+});
+</script>
+</body>
+</html>
